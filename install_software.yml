@@ -1,1 +1,10 @@
 ---
+- hosts: all
+  become: yes
+  
+  tasks:
+    - name: Install Chrome Remote Desktop
+      yum:
+        name:
+          - chrome-remote-desktop
+        state: present
