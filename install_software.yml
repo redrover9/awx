@@ -6,5 +6,5 @@
     - name: Install random junk
       yum:
         name:
-          - youtube-dl
+          - samba
         state: present
