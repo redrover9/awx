@@ -3,8 +3,8 @@
   become: yes
   
   tasks:
-    - name: Install Chrome Remote Desktop
+    - name: Install random junk
       yum:
         name:
-          - chrome-remote-desktop
+          - youtube-dl
         state: present
