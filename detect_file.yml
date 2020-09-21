@@ -1,2 +1,13 @@
 ---
 - hosts: all
+
+  tasks:
+    - name: Detect if file exsists
+      stat: 
+        path: /tmp/testfile
+      register: stat_result
+    
+    - name: Alert if file has been deleted
+      debug:
+        msg: File was deleted!
+      when: not stat_result.stat.exists 
